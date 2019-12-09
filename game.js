@@ -28,7 +28,7 @@ let Game = function(){
     this.endFrame.init(this, this.width, this.height, "images/endGame.png");
 
     this.questions = new QuestionList();
-    $.get('http://localhost:8080', (res) => {
+    $.get('http://api-for-game.herokuapp.com/', (res) => {
       this.questions.init(this, res.questions);
     });
 
@@ -48,7 +48,9 @@ let Game = function(){
 
     this.bgMusic = new Sound();
     this.bgMusic.init("sounds/theme_song.mp3", true, 1);
-    this.bgMusic.play();
+
+    this.clickSound = new Sound();
+    this.clickSound.init("sounds/piece_on_click.mp3", false, 1);
   }
 
 
@@ -67,6 +69,7 @@ let Game = function(){
       self.startButton.draw();
       if(self.startButton.isClicked){
         self.launch = true;
+	      self.bgMusic.play();
       }
     }
 

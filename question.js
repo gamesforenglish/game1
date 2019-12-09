@@ -97,7 +97,7 @@ let Question = function(){
     }
 
     this.correctSound = new Sound();
-    this.correctSound.init("sounds/correct_sound.mp3", false);
+    this.correctSound.init("sounds/correct_sound.wav", false);
 
     this.incorrectSound = new Sound();
     this.incorrectSound.init("sounds/incorrect_sound.wav", false);

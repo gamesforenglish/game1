@@ -40,7 +40,7 @@ let Piece = function(){
     }
 
     this.clickSound = new Sound();
-    this.clickSound.init("sounds/piece_on_click.mp3", false, 0.3);
+    this.clickSound.init("sounds/piece_on_click.mp3", false, 1);
   }
 
 
