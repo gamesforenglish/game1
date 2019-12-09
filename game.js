@@ -28,7 +28,7 @@ let Game = function(){
     this.endFrame.init(this, this.width, this.height, "images/endGame.png");
 
     this.questions = new QuestionList();
-    $.get('http://api-for-game.herokuapp.com/', (res) => {
+    $.get('https://api-for-game.herokuapp.com/', (res) => {
       this.questions.init(this, res.questions);
     });
 
